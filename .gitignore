@@ -1,0 +1,12 @@
+.DS_STORE
+node_modules
+*~
+static
+build/
+bin/
+data
+typings/
+.vscode/
+config
+*.log*
+.module-cache
