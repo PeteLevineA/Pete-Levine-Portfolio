@@ -63,20 +63,28 @@ gulp.task('watch', function () {
     gulp.watch(config.paths.html, ['html']);
 });
 
-// LINT
-gulp.task('lint', function () {
+// LINT JS
+gulp.task('lintjs', function () {
     return gulp.src(config.paths.js)
-        //.pipe(lint({ config: 'eslint.config.json' }))
-        .pipe(lint.format());
+        .pipe(lint())
+        .pipe(lint.format())
+        .pipe(lint.failAfterError());
+});
+
+gulp.task('lintjsx', function () {
+    return gulp.src(config.paths.jsx)
+        .pipe(lint())
+        .pipe(lint.format())
+        .pipe(lint.failAfterError());
 });
 
 gulp.task('watchjsx', function () {
-    gulp.watch(config.paths.jsx, ['js', 'lint']);
+    gulp.watch(config.paths.jsx, ['js', 'lintjsx']);
 });
 
 gulp.task('watchjs', function() {
-    gulp.watch(config.paths.js, ['js', 'lint']);
+    gulp.watch(config.paths.js, ['js', 'lintjs']);
 });
 
 // Default
-gulp.task('default', ['html', 'js', 'less', 'lint', 'watch', 'watchjs', 'watchjsx', 'watchcss']);
+gulp.task('default', ['html', 'js', 'less', 'lintjs', 'lintjsx', 'watch', 'watchjs', 'watchjsx', 'watchcss']);

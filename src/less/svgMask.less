@@ -1,0 +1,26 @@
+@import "constants.less";
+
+.textMask {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+svg {
+    width: 100%;
+    height: inherit;
+    text {
+        text-anchor: middle;
+    }
+    .alpha {
+        fill: rgba(255,255,255,.95);
+    }
+    .text {
+        letter-spacing: -1px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    .base {
+        fill: rgb(0,0,0);
+    }
+}

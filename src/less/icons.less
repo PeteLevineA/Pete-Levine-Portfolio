@@ -1,0 +1,44 @@
+@import "constants.less";
+@import "bounceIn.less";
+
+.links {
+    position: relative;
+    padding: 20px;
+    width: 100%;
+}
+
+.links a {
+    width: 74px;
+    height: 74px;
+    padding: 8px;
+    margin: 10px;
+    background: @slateBlue;
+    border-radius: 37px;
+    border: 0px;
+}
+
+.links a i {
+    height: 66px;
+    width: 66px;
+}
+
+.links a:hover {
+    /** animate on hover **/
+    .BounceIn(.25);
+}
+
+.inIcon {
+    background-image: url('images/linkedin.svg');
+}
+.twitterIcon {
+    background-image: url('images/twitter.svg');
+}
+.emailIcon {
+    background-image: url('images/email.svg');
+}
+.githubIcon {
+    background-image: url('images/github.svg');
+}
+.codepenIcon {
+    background-image: url('images/codepen.svg');
+}

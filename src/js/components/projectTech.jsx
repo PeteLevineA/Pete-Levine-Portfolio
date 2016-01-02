@@ -11,15 +11,15 @@ var ProjectTech = React.createClass({
 		return <div className="projectTech">
 					<div class="title">{this.props.title}</div>
 					<div class="technologies">
-						{{
-							if( this.props.technologies ) {
+						{ 
+							if(this.props.technologies) {
 								this.props.technologies.map(function(tech) {
 									return <div key={tech} className="tech">
 											{tech}
 											</div>;
 								});
 							}
-						}}
+						}
 					</div>
 				</div>;
 	}
