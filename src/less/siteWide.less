@@ -1,9 +1,14 @@
 @import "constants.less";
+@import "bounce.less";
+@import "bounceIn.less";
+@import "fadeIn.less";
 
 html, body {
     height: 100%;
     padding: 0px;
     margin: 0px;
+    font: 14px Segoe UI, Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 100;
 }
 
 * {
@@ -12,6 +17,86 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.hidden {
+    display: none;
+}
+
 footer, header {
-    background-color: @lightGray;
+    position: relative;
+    background-color: @offWhite;
+    z-index: 2;
+}
+
+.app, #app {
+    position: relative;
+}
+
+.title, .subTitle {
+    width: 100%;
+    text-align: center;
+}
+.subText {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+}
+.subText .intro, .subText .subTextTitle  {
+    width: 45%;
+}
+.subText .subTextTitle {
+    color: @brown;
+    text-align: center;
+}
+.title .first {
+    color: @slateBlue;
+    font-weight: 400;
+}
+.title .last {
+    color: @lightBlue;
+}
+
+@media screen {
+    @media(min-width: 320px) {
+        .title {
+            font-size: 42px;
+        }
+        .subText .subTextTitle {
+            font-size: 30px;
+        }
+        .subText .intro {
+            font-size: 22px;
+        }
+    }
+    @media(min-width: 768px) {
+        .title {
+            font-size: 54px;
+        }
+        .subText .subTextTitle {
+            font-size: 32px;
+        }
+        .subText .intro {
+            font-size: 24px;
+        }
+    }
+    @media(min-width: 1280px) {
+        .title {
+            font-size: 80px;
+        }
+        .subText .subTextTitle {
+            font-size: 34px;
+        }
+        .subText .intro {
+            font-size: 26px;
+        }
+    }
 }

@@ -1,44 +1,75 @@
 @import "constants.less";
+@import "bounce.less";
 @import "bounceIn.less";
+@import "fadeIn.less";
 
 .links {
     position: relative;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 100%;
+    text-align: center;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+}
+
+.links.active-start {
+    .FadeIn(.5s);
+}
+
+.links.active-end {
+    opacity: 1;
+}
+.links.inactive-start, .links.inactive-end {
+    opacity: 0;
 }
 
 .links a {
+    display: block;
     width: 74px;
     height: 74px;
-    padding: 8px;
     margin: 10px;
-    background: @slateBlue;
-    border-radius: 37px;
-    border: 0px;
+    border-radius: 74px;
+    border: 2px solid @slateBlue;
 }
 
 .links a i {
-    height: 66px;
-    width: 66px;
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-left: 12px;
+    top: 12px;
+    background-size: 100%;
 }
 
 .links a:hover {
     /** animate on hover **/
-    .BounceIn(.25);
+    .Bounce(.1s, .35s, 1);
 }
 
 .inIcon {
-    background-image: url('images/linkedin.svg');
+    background-image: url('../images/linkedin.svg');
 }
 .twitterIcon {
-    background-image: url('images/twitter.svg');
+    background-image: url('../images/twitter.svg');
 }
 .emailIcon {
-    background-image: url('images/email.svg');
+    background-image: url('../images/email.svg');
 }
 .githubIcon {
-    background-image: url('images/github.svg');
+    background-image: url('../images/github.svg');
 }
 .codepenIcon {
-    background-image: url('images/codepen.svg');
+    background-image: url('../images/codepen.svg');
 }

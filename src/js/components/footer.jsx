@@ -5,9 +5,10 @@ var React = require('react');
 var Footer = React.createClass({
     render: function() {
         return <footer>
-            Copyright © 2016 Pete Levine
-            <div class="attribution">
+            © Copyright 2016 Pete Levine
+            <div className="attribution">
                 Icons made by 
+                <a href="http://www.flaticon.com/authors/icomoon" title="Icomoon">Icomoon</a>,
                 <a href="http://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a>, 
                 <a href="http://www.freepik.com" title="Freepik">Freepik</a> 
                 from 
