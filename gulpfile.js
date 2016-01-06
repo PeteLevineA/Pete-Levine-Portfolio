@@ -14,6 +14,7 @@ var config = {
         html: './views/*.html',
         bin: './bin',
         images: './views/images/*.*',
+        video: './views/video/*.*',
         appJs: [
             './src/js/components/app.jsx'
         ],
@@ -38,6 +39,11 @@ gulp.task('html', function () {
 gulp.task('images', function() {
     gulp.src(config.paths.images)
         .pipe(gulp.dest(config.paths.bin + '/images'));
+});
+
+gulp.task('video', function() {
+    gulp.src(config.paths.video)
+        .pipe(gulp.dest(config.paths.bin + '/video'));
 });
 
 // Transpile JSX to JS and move to Dist
@@ -93,4 +99,4 @@ gulp.task('watchjs', function() {
 });
 
 // Default
-gulp.task('default', ['html', 'images', 'js', 'less', 'lintjs', 'lintjsx', 'watch', 'watchjs', 'watchjsx', 'watchcss']);
+gulp.task('default', ['html', 'images', 'video', 'js', 'less', 'lintjs', 'lintjsx', 'watch', 'watchjs', 'watchjsx', 'watchcss']);

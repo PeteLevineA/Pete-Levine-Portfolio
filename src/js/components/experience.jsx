@@ -9,22 +9,25 @@ var ScrollContainer = require('./scrollContainer.jsx');
 var Experience = React.createClass({
     render: function() {
         return <section className="experience">
-                <Planet title="My Next Adventure" subTitle="" iconImg="images/earth.svg">
-                    
+                <Planet title="Open Source" subTitle="" iconImg="images/earth.svg">
+                    - Projects in ReactJS, Less, NodeJS & MongoDB
                 </Planet>
                 <Planet title="Caterpillar" jobTitle="Senior Software Engineer" subTitle="Feb. 15 - Current" iconImg="images/mars.svg">
                     - Front end development for assembly line applications<br />
-                    - Tech: Knockoutjs, Bootstrap, jQuery, HTML5 & CSS3
+                    - Tech: Knockoutjs, Bootstrap, jQuery, HTML5 & CSS3<br />
+                    - Code reviewer, mentor, helped develop the team's software process
                 </Planet>
                 <Planet title="Innovatient" jobTitle="Senior Software Developer" subTitle="Sep. 13 - Feb. 15" iconImg="images/jupiter.svg">
                     - Front end development for patient engagement applications<br />
-                    - Front end Tech: HTML5 & CSS3 Responsive Apps, jQuery, Light AngularJS<br />
-                    - Back end Tech: .Net MVC RESTful Clinical App Integration, C#, WCF, SQL Server 
+                    - Front end: HTML5 & CSS3 Responsive Apps, jQuery, Light AngularJS<br />
+                    - Back end: .Net MVC RESTful Clinical App Integration, C#, SQL<br />
+                    - Wore many hats in a less than ten person startup
                 </Planet>
-                <Planet title="Allscripts" jobTitle="Software Development Engineer to Senior Software Development Engineer" subTitle="Feb. 08 - Sep. 13" iconImg="images/saturn.svg">
+                <Planet title="Allscripts" jobTitle="Software Engineer to Senior Software Engineer" subTitle="Feb. 08 - Sep. 13" iconImg="images/saturn.svg">
                     - Front end development for hospital healthcare<br />
-                    - Front end Tech: jQuery, Telerik, VanillaJS<br />
-                    - Back end Tech: C#, SQL Server
+                    - Front end: jQuery, Telerik, VanillaJS
+                    - Back end: C#, SQL Server<br />
+                    - Trained others on Front-End dev. Ran Lunch and Learns
                 </Planet>
                 <Planet title="Moving Pictures" jobTitle="Web Developer" subTitle="Feb. 07 to Jan. 08" iconImg="images/neptune.svg">
                     - Front end development for a marketting firm<br />

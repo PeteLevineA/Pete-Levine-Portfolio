@@ -64,9 +64,16 @@ footer, header {
 .title .last {
     color: @lightBlue;
 }
+.title {
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+.subText .subTextTitle {
+    padding-bottom: 30px;
+}
 
 @media screen {
-    @media(min-width: 320px) {
+    @media(max-width: 768px) {
         .title {
             font-size: 42px;
         }
@@ -90,10 +97,10 @@ footer, header {
     }
     @media(min-width: 1280px) {
         .title {
-            font-size: 80px;
+            font-size: 100px;
         }
         .subText .subTextTitle {
-            font-size: 34px;
+            font-size: 42px;
         }
         .subText .intro {
             font-size: 26px;

@@ -74,7 +74,7 @@
 }
 
 @media screen {
-    @media(mx-width: 1279px) {
+    @media(max-width: 1023px) {
         .planet .dateTitle {
             display: none;
         }
@@ -88,10 +88,6 @@
         .planet .titleDesc {
             width: 70%;
         }
-        section .planet:nth-child(1) .companyTitle {
-            font-size: 40px;
-            font-weight: 400;
-        }
         .planet .jobTitle, .planet .dateTitle {
             font-size: 28px;
         }
@@ -99,7 +95,7 @@
             font-size: 32px;
         }
         .planet .titleDesc .description {
-            font-size: 16px;
+            font-size: 18px;
         }
         .planet .jobTitle {
             font-size: 20px;
@@ -114,6 +110,40 @@
         }
         .planet.inactive-start, .planet.inactive-end {
             opacity: 0;
+        }
+    }
+    @media(max-width: 1279px) {
+        .planet .dateTitle {
+            display: none;
+        }
+        .planet .icon {
+            width: 65px;
+        }
+        .planet img {
+            width: 65px;
+            height: 65px;
+        }
+        .planet .titleDesc {
+            width: 70%;
+        }
+        .planet .icon {
+            width: 100px;
+        }
+        .planet img {
+            width: 100px;
+            height: 100px;
+        }
+        .planet .dateTitle {
+            font-size: 28px;
+        }
+        .planet .companyTitle {
+            font-size: 32px;
+        }
+        .planet .titleDesc .description {
+            font-size: 20px;
+        }
+        .planet .jobTitle {
+            font-size: 22px;
         }
     }
     @media(min-width: 1280px) {
@@ -152,19 +182,15 @@
         .planet:nth-child(even) .titleDesc {
             text-align: right;
         }
+        .planet .dateTitle, .planet .titleDesc {
+            width: 35%;
+        }
         .planet .icon {
             width: 114px;
         }
         .planet img {
             width: 114px;
             height: 114px;
-        }
-        .planet .dateTitle, .planet .titleDesc {
-            width: 35%;
-        }
-        section .planet:nth-child(1) .companyTitle {
-            font-size: 46px;
-            font-weight: 400;
         }
         .planet .dateTitle {
             font-size: 32px;
@@ -173,7 +199,7 @@
             font-size: 36px;
         }
         .planet .titleDesc .description {
-            font-size: 18px;
+            font-size: 20px;
         }
         .planet .jobTitle {
             font-size: 22px;

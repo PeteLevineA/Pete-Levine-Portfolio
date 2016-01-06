@@ -7,7 +7,7 @@ var ProjectTitle = React.createClass({
 		title: React.PropTypes.string
 	},
 	render: function() {
-		return <span className="projectTitle">{this.props.title}</span>;
+		return <div className="projectTitle">{this.props.title}</div>;
 	}
 });
 

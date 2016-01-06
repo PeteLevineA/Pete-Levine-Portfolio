@@ -8,6 +8,7 @@ var Footer = require('./footer.jsx');
 var Experience = require('./experience.jsx');
 var TextMask = require('./textMask.jsx');
 var ScrollContainer = require('./scrollContainer.jsx');
+var Projects = require('./projects.jsx');
 
 var App = React.createClass({
 	render: function() {
@@ -20,18 +21,17 @@ var App = React.createClass({
                 <ScrollContainer scrollClass="yellowImg" 
                     scrolledIntoViewCallback={this.handleYellowScrolledIntoView} />
                 <TextMask idName="Projects" displayText="Projects" />
+                <Projects />
                 <div className="fullscreenImg blue"></div>
                 <div ref="yellowImg" className="fullscreenImg yellow hidden"></div>
                 <Footer />
             </div>;
 	},
     handleYellowScrolledIntoView: function() {
-        console.log('am I here?');
         var yellowImg = ReactDOM.findDOMNode(this.refs.yellowImg);
         yellowImg.className = "fullscreenImg yellow";
     },
     handleYellowScrolledOutOfView: function() {
-        console.log('am I here?');
         var yellowImg = ReactDOM.findDOMNode(this.refs.yellowImg);
         yellowImg.className = "fullscreenImg yellow hidden";
     }
