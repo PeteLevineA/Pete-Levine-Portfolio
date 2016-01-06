@@ -20,10 +20,12 @@ var Projects = React.createClass({
 		return <section className="projects">
 				    <Project title="Proj[Rekt]" tech={techProjRekt}
                         videoSrc="video/projRekt.mp4" videoType="video/mp4"
-                        projectLink="https://github.com/PeteLevineA/projrekt" />
+                        projectLink="https://github.com/PeteLevineA/projrekt"
+                        posterLink="./images/projRektSS.jpg" />
                     <Project title="Node Mirror Pi" tech={techNodeMirror}
                         videoSrc="video/NodePiMirror.mp4" videoType="video/mp4"
-                        projectLink="https://github.com/PeteLevineA/Node-RaspberryPi-Mirror" />
+                        projectLink="https://github.com/PeteLevineA/Node-RaspberryPi-Mirror"
+                        posterLink="./images/piMirrorSS.jpg" />
 				</section>;
 	}
 });

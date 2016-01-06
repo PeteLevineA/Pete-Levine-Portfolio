@@ -11,7 +11,8 @@ var ProjectProjRekt = React.createClass({
         tech: React.PropTypes.array,
         videoSrc: React.PropTypes.string,
         videoType: React.PropTypes.string,
-        projectLink: React.PropTypes.string
+        projectLink: React.PropTypes.string,
+        posterLink: React.PropTypes.string
     },
 	render: function() {
 		
@@ -21,7 +22,7 @@ var ProjectProjRekt = React.createClass({
                         <ProjectTech tech={this.props.tech} />
                     </div>
                     <div className="projectVideo">
-                        <video autoPlay="autoplay" loop="loop" muted="muted">
+                        <video autoPlay="autoplay" loop="loop" muted="muted" poster={this.props.posterLink}>
                             <source src={this.props.videoSrc} type={this.props.videoType} />
                         </video>
                         <div className="patternOverlay"></div>

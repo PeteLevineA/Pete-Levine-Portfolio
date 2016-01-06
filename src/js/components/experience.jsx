@@ -30,7 +30,7 @@ var Experience = React.createClass({
                     - Trained others on Front-End dev. Ran Lunch and Learns
                 </Planet>
                 <Planet title="Moving Pictures" jobTitle="Web Developer" subTitle="Feb. 07 to Jan. 08" iconImg="images/neptune.svg">
-                    - Front end development for a marketting firm<br />
+                    - Front end development for healthcare marketing<br />
                     - Tech: Vanilla HTML, CSS & Javascript 
                 </Planet>
                 <Planet title="Covista Communications" jobTitle="Web Developer" subTitle="Aug. 06 to Jan. 07" iconImg="images/mars.svg">

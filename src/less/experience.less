@@ -32,12 +32,6 @@
 .planet .dateTitle {
     color: @brown;
 }
-.planet {
-    padding: 22px;
-}
-.planet .icon {
-    padding: 20px;
-}
 .rocketEnd {
     position: relative;
     height: 1px;
@@ -88,15 +82,17 @@
         .planet .titleDesc {
             width: 70%;
         }
-        .planet .jobTitle, .planet .dateTitle {
-            font-size: 28px;
+        .planet .jobTitle,
+        .planet .dateTitle {
+            font-size: 24px;
         }
         .planet .companyTitle {
-            font-size: 32px;
+            font-size: 28px;
         }
         .planet .titleDesc .description {
-            font-size: 18px;
+            font-size: 16px;
         }
+
         .planet .jobTitle {
             font-size: 20px;
         }
@@ -111,8 +107,14 @@
         .planet.inactive-start, .planet.inactive-end {
             opacity: 0;
         }
+        .planet {
+            padding: 10px;
+        }
+        .planet .icon {
+            padding: 8px;
+        }
     }
-    @media(max-width: 1279px) {
+    @media(min-width: 1024px) and (max-width: 1279px) {
         .planet .dateTitle {
             display: none;
         }
@@ -144,6 +146,12 @@
         }
         .planet .jobTitle {
             font-size: 22px;
+        }  
+        .planet {
+            padding: 12px;
+        }
+        .planet .icon {
+            padding: 10px;
         }
     }
     @media(min-width: 1280px) {
@@ -203,6 +211,12 @@
         }
         .planet .jobTitle {
             font-size: 22px;
+        }  
+        .planet {
+            padding: 22px;
+        }
+        .planet .icon {
+            padding: 20px;
         }
     }
 }

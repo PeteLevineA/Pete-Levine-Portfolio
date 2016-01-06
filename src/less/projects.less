@@ -34,7 +34,6 @@ video {
 .projectTitle {
     width: 100%;
     color: @slateBlue;
-    padding-bottom: 10px;
     text-align: center;
 }
 .techTitle {
@@ -44,7 +43,6 @@ video {
 }
 .tech {
     color: @brown;
-    padding: 10px;
 }
 .projectTech {
     position: relative;
@@ -143,25 +141,29 @@ video {
 
 @media screen {
     @media(max-width: 1023px) {
-        .projectTitle, .gitTitle {
-            font-size: 28px;
+        .projectTitle,
+        .gitTitle {
+            font-size: 18px;
         }
         .techTitle {
-            font-size: 24px;
+            font-size: 16px;
         }
         .tech {
-            font-size: 20px;
+            font-size: 14px;
+            padding: 2px;
         }
     }
     @media(max-width: 1279px) {
-        .projectTitle, .gitTitle {
-            font-size: 32px;
+        .projectTitle,
+        .gitTitle {
+            font-size: 24px;
         }
         .techTitle {
-            font-size: 30px;
+            font-size: 22px;
         }
         .tech {
-            font-size: 26px;
+            font-size: 18px;
+            padding: 6px;
         }
         .projectDetails {
             width: 70%;
@@ -169,16 +171,22 @@ video {
         .projectVideo {
             width: 70%;
         }
+
     }
     @media(min-width: 1280px) {
-        .projectTitle, .gitTitle {
+        .projectTitle,
+        .gitTitle {
             font-size: 36px;
+        }
+        .projectTitle {    
+            padding-bottom: 10px;
         }
         .techTitle {
             font-size: 32px;
         }
         .tech {
             font-size: 28px;
+            padding: 10px;
         }
         .projectDetails {
             width: 30%;

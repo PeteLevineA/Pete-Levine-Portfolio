@@ -18,3 +18,14 @@
 .fullscreenImg.yellow {
     background-image: url('../images/yellowNebulaBGScaled.jpg');
 }
+
+@media screen and (orientation:landscape) {
+  .fullscreenImg {
+    background-size: 100%;
+  }
+}
+@media screen and (orientation:portrait) {
+  .fullscreenImg {
+    background-size: auto 100%;
+  }
+}
