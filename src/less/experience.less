@@ -1,0 +1,208 @@
+@import "constants.less";
+@import "fadeIn.less";
+@import "transitionAll.less";
+
+.planet {
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    .TransitionAll(.5s);
+}
+
+.experience {
+    position: relative;
+    width: 100%;
+    background-color: #ddd;
+    z-index: 2;
+}
+
+.planet .companyTitle {
+    color: @lightBlue;
+}
+.planet .jobTitle {
+    color: @darkBlue;
+}
+.planet .dateTitle {
+    color: @brown;
+}
+.planet {
+    padding: 22px;
+}
+.planet .icon {
+    padding: 20px;
+}
+.rocketEnd {
+    position: relative;
+    height: 1px;
+    width: 1px;
+    opacity: 0;
+}
+.rocket {
+    position: relative;
+    z-index: 3;
+    height: 1px;
+    width: 1px;
+    background: url(../images/rocket.svg);
+    background-size: 100%;
+}
+.rocket.active-start {
+    width: 64px;
+    height: 64px;
+    .FadeIn(.5s);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -32px;
+    margin-top: -32px; 
+}
+.rocket.active-end {
+    width: 64px;
+    height: 64px;
+    opacity: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -32px;
+    margin-top: -32px; 
+}
+
+@media screen {
+    @media(max-width: 1023px) {
+        .planet .dateTitle {
+            display: none;
+        }
+        .planet .icon {
+            width: 65px;
+        }
+        .planet img {
+            width: 65px;
+            height: 65px;
+        }
+        .planet .titleDesc {
+            width: 70%;
+        }
+        .planet .jobTitle, .planet .dateTitle {
+            font-size: 28px;
+        }
+        .planet .companyTitle {
+            font-size: 32px;
+        }
+        .planet .titleDesc .description {
+            font-size: 18px;
+        }
+        .planet .jobTitle {
+            font-size: 20px;
+        }
+        .planet.active-start {
+            opacity: 0;
+            left: 10px;
+        }
+        .planet.active-end {
+            opacity: 1;
+            left: 0px;
+        }
+        .planet.inactive-start, .planet.inactive-end {
+            opacity: 0;
+        }
+    }
+    @media(max-width: 1279px) {
+        .planet .dateTitle {
+            display: none;
+        }
+        .planet .icon {
+            width: 65px;
+        }
+        .planet img {
+            width: 65px;
+            height: 65px;
+        }
+        .planet .titleDesc {
+            width: 70%;
+        }
+        .planet .icon {
+            width: 100px;
+        }
+        .planet img {
+            width: 100px;
+            height: 100px;
+        }
+        .planet .dateTitle {
+            font-size: 28px;
+        }
+        .planet .companyTitle {
+            font-size: 32px;
+        }
+        .planet .titleDesc .description {
+            font-size: 20px;
+        }
+        .planet .jobTitle {
+            font-size: 22px;
+        }
+    }
+    @media(min-width: 1280px) {
+        .planet .dateTitle {
+            display: block;
+        }
+        .planet:nth-child(even) {
+            flex-direction: row-reverse;
+            -webkit-flex-direction: row-reverse;
+            -ms-flex-direction: row-reverse;
+        }
+        .planet:nth-child(even).active-start {
+            right: 10px;
+        }
+        .planet:nth-child(even).active-end {
+            right: 0px;
+        }
+        .planet:nth-child(odd).active-start {
+            left: 10px;
+        }
+        .planet:nth-child(odd).active-end {
+            left: 0px;
+        }
+        .planet.active-start {
+            opacity: 0;
+        }
+        .planet.active-end {
+            opacity: 1;
+        }
+        .planet.inactive-start, .planet.inactive-end {
+            opacity: 0;
+        }
+        .planet:nth-child(odd) .dateTitle {
+            text-align: right;
+        }
+        .planet:nth-child(even) .titleDesc {
+            text-align: right;
+        }
+        .planet .dateTitle, .planet .titleDesc {
+            width: 35%;
+        }
+        .planet .icon {
+            width: 114px;
+        }
+        .planet img {
+            width: 114px;
+            height: 114px;
+        }
+        .planet .dateTitle {
+            font-size: 32px;
+        }
+        .planet .companyTitle {
+            font-size: 36px;
+        }
+        .planet .titleDesc .description {
+            font-size: 20px;
+        }
+        .planet .jobTitle {
+            font-size: 22px;
+        }
+    }
+}
