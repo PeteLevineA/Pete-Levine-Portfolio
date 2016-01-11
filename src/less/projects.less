@@ -1,12 +1,13 @@
 @import "constants.less";
 @import "transitionAll.less";
 @import "radialGradient.less";
+@import "bounce.less";
 
 
 .project {
     position: relative;
     width: 100%;
-    z-index: 2;
+    z-index: 5;
     display: flex;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -67,12 +68,12 @@ video {
     display: flex;
     display: -webkit-flex;
     display: -ms-flexbox;
-    align-items: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    justify-content: center;
-    -webkit-justify-content: center;
-    -ms-justify-content: center;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+    -ms-align-items: flex-end;
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    -ms-justify-content: flex-end;
     flex-direction: column;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -84,6 +85,7 @@ video {
     border-radius: 100%;
     border: 2px solid @slateBlue;
     opacity: .8;
+    margin-right: 30px;
 }
 
 .githubLink a img {
@@ -95,6 +97,23 @@ video {
 
 .gitTitle {
     color: @lightBlue;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.gitTitle a, 
+.gitTitle a:link, 
+.gitTitle a:visited {
+    color: @slateBlue;
+}
+
+.gitTitle a:link:active,
+.gitTitle a:visited:active {
+    color: @lightBlue;
+}
+
+.githubLink a img:hover,
+.gitTitle a:hover {
+    .Bounce(.1s, .35s, 1);
 }
 
 .patternOverlay, .colorOverlay {
@@ -141,9 +160,11 @@ video {
 
 @media screen {
     @media(max-width: 1023px) {
-        .projectTitle,
-        .gitTitle {
+        .projectTitle {
             font-size: 18px;
+        }
+        .gitTitle {
+            font-size: 16px;
         }
         .techTitle {
             font-size: 16px;
@@ -154,9 +175,11 @@ video {
         }
     }
     @media(max-width: 1279px) {
-        .projectTitle,
-        .gitTitle {
+        .projectTitle {
             font-size: 24px;
+        }
+        .gitTitle {
+            font-size: 18px;
         }
         .techTitle {
             font-size: 22px;
@@ -174,9 +197,11 @@ video {
 
     }
     @media(min-width: 1280px) {
-        .projectTitle,
-        .gitTitle {
+        .projectTitle {
             font-size: 36px;
+        }
+        .gitTitle {
+            font-size: 22px;
         }
         .projectTitle {    
             padding-bottom: 10px;

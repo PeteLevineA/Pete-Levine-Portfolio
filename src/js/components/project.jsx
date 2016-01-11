@@ -8,6 +8,7 @@ var ScrollContainer = require('./scrollContainer.jsx');
 var ProjectProjRekt = React.createClass({
     propTypes: {
         title: React.PropTypes.string,
+        subTitle: React.PropTypes.string,
         tech: React.PropTypes.array,
         videoSrc: React.PropTypes.string,
         videoType: React.PropTypes.string,
@@ -19,7 +20,7 @@ var ProjectProjRekt = React.createClass({
 		return <ScrollContainer scrollClass="project">
                     <div className="projectDetails">
                         <ProjectTitle title={this.props.title} />
-                        <ProjectTech tech={this.props.tech} />
+                        <ProjectTech subTitle={this.props.subTitle} tech={this.props.tech} />
                     </div>
                     <div className="projectVideo">
                         <video autoPlay="autoplay" loop="loop" muted="muted" poster={this.props.posterLink}>
@@ -35,7 +36,8 @@ var ProjectProjRekt = React.createClass({
                                 </a>
                             </div>
                             <div className="gitTitle">
-                                View my source on Github!
+                                <a href={this.props.projectLink} className="github" 
+                                    title="Project on Github">View source on Github!</a>
                             </div>
                         </div>
                     </div>

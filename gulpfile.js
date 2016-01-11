@@ -8,6 +8,8 @@ var concat = require('gulp-concat');
 var lint = require('gulp-eslint'); // Lint JS Files, including JSX
 var path = require('path');
 var less = require('gulp-less');
+var streamify = require('gulp-streamify');
+var uglify = require('gulp-uglify');
 
 var config = {
     paths: {
@@ -55,6 +57,19 @@ gulp.task('js', function () {
         .pipe(source('bundle.js'))
         .pipe(gulp.dest(config.paths.bin + '/scripts'));
 });
+
+// Transpile JSX to JS & Minify. Move to Dist
+gulp.task('jsmin', function () {
+    browserify(config.paths.appJs)
+        .transform(reactify)
+        .bundle()
+        .on('error', console.error.bind(console))
+        .pipe(source('bundle.min.js'))
+        .pipe(streamify(uglify()))
+        .pipe(gulp.dest(config.paths.bin + '/scripts'));
+});
+
+
 // Compile Less Files to a bundled Css File
 gulp.task('less', function() {
 	return gulp.src(config.paths.less)
@@ -91,12 +106,12 @@ gulp.task('lintjsx', function () {
 });
 
 gulp.task('watchjsx', function () {
-    gulp.watch(config.paths.jsx, ['js', 'lintjsx']);
+    gulp.watch(config.paths.jsx, ['js', 'jsmin', 'lintjsx']);
 });
 
 gulp.task('watchjs', function() {
-    gulp.watch(config.paths.js, ['js', 'lintjs']);
+    gulp.watch(config.paths.js, ['js', 'jsmin', 'lintjs']);
 });
 
 // Default
-gulp.task('default', ['html', 'images', 'video', 'js', 'less', 'lintjs', 'lintjsx', 'watch', 'watchjs', 'watchjsx', 'watchcss']);
+gulp.task('default', ['html', 'images', 'video', 'js', 'jsmin', 'less', 'lintjs', 'lintjsx', 'watch', 'watchjs', 'watchjsx', 'watchcss']);
