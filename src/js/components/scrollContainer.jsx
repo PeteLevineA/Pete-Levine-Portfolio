@@ -49,8 +49,8 @@ var ScrollContainer = React.createClass({
 	requestAnimationFrameWhenReady: function() {
 		if( !this.scrollReady ) {
 			requestAnimationFrame(this.handleScrollCheck);
-			this.scrollReady = true;
 		}
+        this.scrollReady = true;
 	},
 	handleScrollCheck: function() {
 		var elem = ReactDOM.findDOMNode(this);
