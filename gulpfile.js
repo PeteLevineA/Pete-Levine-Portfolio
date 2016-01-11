@@ -113,5 +113,7 @@ gulp.task('watchjs', function() {
     gulp.watch(config.paths.js, ['js', 'jsmin', 'lintjs']);
 });
 
+gulp.task('buildProd', ['html', 'images', 'video', 'jsmin', 'less']);
+
 // Default
 gulp.task('default', ['html', 'images', 'video', 'js', 'jsmin', 'less', 'lintjs', 'lintjsx', 'watch', 'watchjs', 'watchjsx', 'watchcss']);
