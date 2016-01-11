@@ -18,11 +18,11 @@ var Projects = React.createClass({
 			"Mocha"
 			];
 		return <section className="projects">
-				    <Project title="proj[rekt]" subTitle="Project hour management system."  tech={techProjRekt}
+				    <Project title="proj[rekt]" subTitle="Project time management"  tech={techProjRekt}
                         videoSrc="video/projRekt.mp4" videoType="video/mp4"
                         projectLink="https://github.com/PeteLevineA/projrekt"
                         posterLink="./images/projRektSS.jpg" />
-                    <Project title="Node Mirror Pi" subTitle="Raspberry Pi NodeJS Implementation of the magic mirror." tech={techNodeMirror}
+                    <Project title="Node Mirror Pi" subTitle="Raspberry Pi NodeJS & ReactJS Magic Mirror" tech={techNodeMirror}
                         videoSrc="video/NodePiMirror.mp4" videoType="video/mp4"
                         projectLink="https://github.com/PeteLevineA/Node-RaspberryPi-Mirror"
                         posterLink="./images/piMirrorSS.jpg" />
